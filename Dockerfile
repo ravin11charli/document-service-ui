@@ -15,6 +15,9 @@ ARG VITE_DEFAULT_USER_ID
 ARG VITE_DEFAULT_WORKSPACE_ID
 ARG VITE_DEFAULT_API_VERSION=1.1
 
+# expose args
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 RUN npm run build
 
 # Stage 2: Serve with lightweight nginx
