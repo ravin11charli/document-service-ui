@@ -1,12 +1,10 @@
-
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    environment: 'jsdom',
+    environment: 'jsdom', // important for React
     coverage: {
-      reporter: ['text', 'lcov'],
-      include: ['src/**/*.{js,jsx,ts,tsx}'],
+      reporter: ['text', 'lcov']
     }
   }
 });
