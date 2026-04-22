@@ -1,12 +1,10 @@
-
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  test: {
-    environment: 'jsdom',
-    coverage: {
-      reporter: ['text', 'lcov'],
-      include: ['src/**/*.{js,jsx,ts,tsx}'],
-    }
-  }
-});
+  plugins: [react(), tailwindcss()],
+  server: {
+    port: 5173,
+  },
+})
