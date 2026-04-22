@@ -4,7 +4,9 @@ export default defineConfig({
   test: {
     environment: 'jsdom', // important for React
     coverage: {
-      reporter: ['text', 'lcov']
+      reporter: ['text', 'html', 'lcov'],
+      include: ['src/**/*.{js,jsx,ts,tsx}'],
+      exclude: ['node_modules/', 'src/**/*.test.*']
     }
   }
 });
